@@ -7,6 +7,8 @@ import {
 export default class Login extends React.Component{
   static navigationOptions = {
       title: 'Login',
+      headerTintColor: '#ffffff',
+      headerStyle: {backgroundColor:'#673AB7',padding:20}
     };
     constructor(props){
       super(props);
@@ -30,8 +32,11 @@ export default class Login extends React.Component{
             onChangeText={(text) => this.setState({text})}
             value={this.state.text}
           />
-      <Button style={styles.formButton} onPress={()=>navigate('Signup')}  title="Sign in"
+      <Button style={styles.formButton} onPress={()=>navigate('Home')}  title="Sign in"
                 color="#841584" accessibilityLabel="Save content"/>
+                <View>
+                <Text onPress={()=>navigate("Signup")} style = {styles.formFooter}>Already signed up?
+                Click here to Login</Text></View>
                 </View>
 
 

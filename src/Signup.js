@@ -5,6 +5,8 @@ import styles from '../appstyles';
 export default class Signup extends React.Component{
   static navigationOptions = {
       title: 'Signup',
+      headerTintColor: '#ffffff',
+      headerStyle: {backgroundColor:'#673AB7'}
     };
     constructor(props){
       super(props);

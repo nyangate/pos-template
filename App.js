@@ -2,39 +2,29 @@ import React from 'react';
 import { StyleSheet, Text, View,ToolbarAndroid } from 'react-native';
 import Login from './src/Login';
 import Signup from './src/Signup';
+import Home from './src/Home';
 import {
-  StackNavigator,
+  StackNavigator,DrawerNavigator,
 } from 'react-navigation';
 import styles from './appstyles';
 
 
 const Template = StackNavigator({
-  Home: { screen: Login },
+  Login: { screen: Login },
   Signup: { screen: Signup },
+  Home: { screen: Home },
 });
+
 export default class App extends React.Component {
 
   constructor(props){
     super(props);
-    this.onActionSelected = this.onActionSelected.bind(this);
     this.state = {message: "Click here to create your account",isLogin:true};
-    this.linkClicked = this.linkClicked.bind(this);
 
   }
 
-  onActionSelected(){
 
-  }
 
-  linkClicked(){
-    console.log('login/signup clicked');
-    // if(this.state.isLogin){
-    //   this.setState({isLogin:false,message:"Login"});
-    // }else{
-    //   this.setState({isLogin:true,message:"Click here to create your account"});
-    // }
-
-  }
   render() {
     return (
       <Template/>
